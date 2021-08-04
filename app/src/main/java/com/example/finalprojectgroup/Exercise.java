@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
+import android.text.PrecomputedText;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -102,21 +103,40 @@ public class Exercise extends AppCompatActivity {
                 mTimerRunning = false;
                 tv.setText("Start");
                 start.setVisibility(View.INVISIBLE);
+                reset.setText("Reset");
                 reset.setVisibility(View.VISIBLE);
             }
         }.start();
         mTimerRunning = true;
         start.setText("pause");
-        reset.setVisibility(View.INVISIBLE);
+        reset.setText("Skip");
+        //reset.setVisibility(View.INVISIBLE);
+        reset.setVisibility(View.VISIBLE);
     }
     private void pauseTimer() {
         mCountDownTimer.cancel();
         mTimerRunning = false;
+        if((String)start.getText() == "pause"){
+            reset.setText("Reset");
+        }else{
+            reset.setText("Skip");
+        }
         start.setText("Start");
+        //reset.setText("Reset");
         reset.setVisibility(View.VISIBLE);
     }
     private void resetTimer() {
-        mTimeLeftInMillis = START_TIME_IN_MILLIS;
+
+        if((String) reset.getText()=="Reset"){
+            mTimeLeftInMillis = START_TIME_IN_MILLIS;
+            reset.setText("Skip");
+        }else{
+            reset.setText("Reset");
+            mTimeLeftInMillis = (mTimeLeftInMillis / 1000) / 60;
+            mTimeLeftInMillis = (mTimeLeftInMillis * 60) * 1000;
+        }
+        pauseTimer();
+
         updateCountDownTextForBeginner();
         reset.setVisibility(View.INVISIBLE);
         start.setVisibility(View.VISIBLE);
