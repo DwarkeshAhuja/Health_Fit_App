@@ -50,7 +50,7 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase DB = this.getWritableDatabase();
         Cursor cursor = DB.rawQuery("Select * from UserLogindetails where name = ?", new String[]{email});
         if(cursor.getCount()>0){
-            long result = DB.delete("UserLogindetails", "name=?", new String[]{email});
+            long result = DB.delete("UserLogindetails", "email=?", new String[]{email});
             return result != -1;
         }
         return false;
@@ -103,6 +103,16 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor cursor = DB.rawQuery("Select * from UserMealdetails where email = ?", new String[]{email});
         //Cursor cursor = DB.rawQuery("Select * from UserLogindetails", null) ;
         return cursor;
+    }
+
+    public Boolean deleteuserMealdata(String email){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("Select * from UserLogindetails where email = ?", new String[]{email});
+        if(cursor.getCount()>0){
+            long result = DB.delete("UserMealdetails", "email=?", new String[]{email});
+            return result != -1;
+        }
+        return false;
     }
 
 }

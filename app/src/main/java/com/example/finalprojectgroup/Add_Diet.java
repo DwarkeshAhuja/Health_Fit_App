@@ -71,6 +71,22 @@ public class Add_Diet extends AppCompatActivity {
             }
         });
 
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Boolean checkdeletedata = DB.deleteuserMealdata(userEmail);
+
+                if(checkdeletedata){
+                    Toast.makeText(Add_Diet.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(Add_Diet.this, "Entry not Deleted", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
