@@ -9,10 +9,13 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class UserProfile extends AppCompatActivity {
 
-    ImageView iv1, iv2, iv3;
+    ImageView iv1, iv2, iv3, menu;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +24,39 @@ public class UserProfile extends AppCompatActivity {
         iv1 = findViewById(R.id.begin);
         iv2 = findViewById(R.id.inter);
         iv3 = findViewById(R.id.advance);
+        menu = findViewById(R.id.menu);
+        tv = findViewById(R.id.Name);
+        Intent intent = getIntent();
+        String nameOfUser = intent.getStringExtra("nameOfUser");
+        String premiumPaid = intent.getStringExtra("premiumPaid");
+        String userEmail = intent.getStringExtra("userEmail");
+        tv.setText(tv.getText()+ " " + nameOfUser + "!");
+        Toast.makeText(this, "You have premium " + premiumPaid , Toast.LENGTH_LONG).show();
+        if(premiumPaid.equals("true")){
+            menu.setVisibility(View.VISIBLE);
+        }else{
+            menu.setVisibility(View.INVISIBLE);
+        }
 
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserProfile.this, Add_Diet.class);
+                intent.putExtra("nameOfUser", nameOfUser);
+                intent.putExtra("userEmail", userEmail);
+                intent.putExtra("premiumPaid", premiumPaid);
+                startActivity(intent);
+            }
+        });
 
         iv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(UserProfile.this, Exercise.class);
                 intent.putExtra("Exercise_Type", "Beginner");
+                intent.putExtra("nameOfUser", nameOfUser);
+                intent.putExtra("userEmail", userEmail);
+                intent.putExtra("premiumPaid", premiumPaid);
                 startActivity(intent);
             }
         });
@@ -36,6 +65,9 @@ public class UserProfile extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(UserProfile.this, Exercise.class);
                 intent.putExtra("Exercise_Type", "Intermediate");
+                intent.putExtra("nameOfUser", nameOfUser);
+                intent.putExtra("userEmail", userEmail);
+                intent.putExtra("premiumPaid", premiumPaid);
                 startActivity(intent);
             }
         });
@@ -44,6 +76,9 @@ public class UserProfile extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(UserProfile.this, Exercise.class);
                 intent.putExtra("Exercise_Type", "Advance");
+                intent.putExtra("nameOfUser", nameOfUser);
+                intent.putExtra("userEmail", userEmail);
+                intent.putExtra("premiumPaid", premiumPaid);
                 startActivity(intent);
             }
         });
