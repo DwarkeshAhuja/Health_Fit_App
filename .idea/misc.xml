@@ -5,9 +5,11 @@
       <map>
         <entry key="app/src/main/res/layout/activity_add_diet.xml" value="0.184375" />
         <entry key="app/src/main/res/layout/activity_exercise.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_register_activity.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.2" />
         <entry key="app/src/main/res/layout/loginform.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/mealdetails.xml" value="0.22" />
         <entry key="app/src/main/res/layout/registerform.xml" value="0.1" />
       </map>
     </option>

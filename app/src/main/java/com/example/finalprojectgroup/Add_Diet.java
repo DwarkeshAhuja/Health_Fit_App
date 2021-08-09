@@ -101,44 +101,47 @@ public class Add_Diet extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                // Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                Intent intent = new Intent(Add_Diet.this,MainActivity2.class);
 
 
                 Cursor res = DB.getMealdata(userEmail);
                 StringBuffer buffer = new StringBuffer();
-                    while(res.moveToNext()){
-                        buffer.append("Email: "+res.getString(0)+"\n");
-                        buffer.append("Day: "+res.getString(1)+"\n");
-                        buffer.append("Breakfast: "+res.getString(2)+"\n");
-                        buffer.append("Lunch: "+res.getString(3)+"\n");
-                        buffer.append("Snacks: "+res.getString(4)+"\n");
-                        buffer.append("Dinner: "+res.getString(5)+"\n\n\n");
-                    }
-                    AlertDialog.Builder builder = new AlertDialog.Builder(Add_Diet.this);
-                    builder.setCancelable(true);
-                    builder.setTitle("Results");
-                    builder.setMessage(buffer.toString());
-                    builder.show();
-//                if(res.getCount() == 0){
-//                    Toast.makeText(MainActivity.this, "Nothing existed!", Toast.LENGTH_SHORT).show();
+//                    while(res.moveToNext()){
+//                        buffer.append("Email: "+res.getString(0)+"\n");
+//                        buffer.append("Day: "+res.getString(1)+"\n");
+//                        buffer.append("Breakfast: "+res.getString(2)+"\n");
+//                        buffer.append("Lunch: "+res.getString(3)+"\n");
+//                        buffer.append("Snacks: "+res.getString(4)+"\n");
+//                        buffer.append("Dinner: "+res.getString(5)+"\n\n\n");
+//                    }
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(Add_Diet.this);
+//                    builder.setCancelable(true);
+//                    builder.setTitle("Results");
+//                    builder.setMessage(buffer.toString());
+//                    builder.show();
+                if(res.getCount() == 0){
+                    Toast.makeText(Add_Diet.this, "Nothing existed!", Toast.LENGTH_SHORT).show();
+
+                }
+                else {
+
+                    intent.putExtra("nameOfUser", nameOfUser);
+                    intent.putExtra("userEmail", userEmail);
+                    intent.putExtra("premiumPaid", premiumPaid);
+                    startActivity(intent);
+//                    StringBuffer buffer = new StringBuffer();
 //
-//                }
-//                else {
-//
-//                    startActivity(intent);
-////                    StringBuffer buffer = new StringBuffer();
-////
-////                    while(res.moveToNext()){
-////                        buffer.append("Name: "+res.getString(0)+"\n");
-////                        buffer.append("Content: "+res.getString(1)+"\n");
-////                        buffer.append("Date of Birth: "+res.getString(2)+"\n\n\n");
-////                    }
-////                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-////                    builder.setCancelable(true);
-////                    builder.setTitle("Results");
-////                    builder.setMessage(buffer.toString());
-////                    builder.show();
-//                }
+//                    while(res.moveToNext()){
+//                        buffer.append("Name: "+res.getString(0)+"\n");
+//                        buffer.append("Content: "+res.getString(1)+"\n");
+//                        buffer.append("Date of Birth: "+res.getString(2)+"\n\n\n");
+//                    }
+//                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//                    builder.setCancelable(true);
+//                    builder.setTitle("Results");
+//                    builder.setMessage(buffer.toString());
+//                    builder.show();
+                }
             }
         });
 
