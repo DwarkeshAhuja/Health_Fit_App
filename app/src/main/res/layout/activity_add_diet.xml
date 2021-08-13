@@ -1,115 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0C0A0E"
-    android:padding="10dp"
-    tools:context=".Add_Diet">
+    android:background="#CCCCFF">
 
-    <TextView
-        android:id="@+id/texttitle"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Please add your daily meals "
-        android:textColor="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        android:textSize="24dp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:background="#CCCCFF"
+        android:padding="10dp"
+        tools:context=".Add_Diet">
 
-    <EditText
-        android:id="@+id/day"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/texttitle"
-        android:hint="Day"
-        android:inputType="textPersonName"
-        android:shadowColor="#FFFFFF"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="24dp" />
+        <TextView
+            android:id="@+id/texttitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/please_add_your_daily_meals"
+            android:textColor="#000000"
+            android:textColorLink="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/breakfast"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/day"
-        android:hint="Breakfast"
-        android:inputType="textPersonName"
-        android:shadowColor="#FFFFFF"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="24dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="14dp"
+            android:id="@+id/divider1"
+            android:layout_below="@id/texttitle"
+            android:background="#5f6368"/>
 
-    <EditText
-        android:id="@+id/lunch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/breakfast"
-        android:hint="Lunch"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/divider1"
+            android:text="@string/enter_day"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginTop="14dp"
+            android:textColor="#000000"
+            android:textSize="26sp"
+            android:id="@+id/dayTitle"
+            android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/snacks"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lunch"
-        android:hint="Snacks"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="24dp" />
+        <EditText
+            android:id="@+id/day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dayTitle"
+            android:hint="@string/eg_monday_tuesday"
+            android:inputType="textPersonName"
+            android:shadowColor="#000000"
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#000000"
+            android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/dinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/snacks"
-        android:hint="Dinner"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/day"
+            android:textStyle="bold"
+            android:text="@string/enter_your_breakfast"
+            android:textAllCaps="true"
+            android:layout_marginTop="14dp"
+            android:textColor="#000000"
+            android:textSize="26sp"
+            android:id="@+id/breakfastLabel"
+            android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/btnInsert"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dinner"
-        android:layout_marginTop="30dp"
-        android:text="Add your plan"
-        android:textSize="24dp" />
+        <EditText
+            android:id="@+id/breakfast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breakfastLabel"
+            android:hint="@string/eg_boiled_eggs_potato"
+            android:inputType="textPersonName"
+            android:shadowColor="#000000"
+            android:textColor="#000000"
+            android:textColorHighlight="#000000"
+            android:textColorHint="#000000"
+            android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/btnUpdate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnInsert"
-        android:text="Update your daily plan"
-        android:textSize="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/breakfast"
+            android:text="@string/enter_your_lunch_items"
+            android:textAllCaps="true"
+            android:layout_marginTop="14dp"
+            android:textColor="#000000"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:id="@+id/lunchLabel"
+            android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/btnDelete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnUpdate"
-        android:text="Delete your plan"
-        android:textSize="24dp" />
+        <EditText
+            android:id="@+id/lunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lunchLabel"
+            android:hint="@string/eg_pulses_rice"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/btnView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnDelete"
-        android:text="View your diet plan"
-        android:textSize="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/lunch"
+            android:text="@string/enter_your_dinner_items"
+            android:textAllCaps="true"
+            android:layout_marginTop="14dp"
+            android:textColor="#000000"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:id="@+id/dinnerLabel"
+            android:layout_height="wrap_content"/>
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/snacks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dinnerLabel"
+            android:hint="@string/eg_chicken_chappatti"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="24sp" />
+
+
+
+        <EditText
+            android:id="@+id/dinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/snacks"
+            android:hint="@string/dinner"
+            android:visibility="gone"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dinner"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/btnInsert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/add_your_plan"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:text="@string/update_your_daily_plan"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_your_plan"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btnView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/view_your_diet_plan"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

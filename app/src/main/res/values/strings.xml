@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Health Fit </string>
+    <string name="view_your_diet_plan">View your diet plan</string>
+    <string name="delete_your_plan">Delete your plan</string>
+    <string name="add_your_plan">Add your plan</string>
+    <string name="update_your_daily_plan">Update your daily plan</string>
+    <string name="dinner">Dinner</string>
+    <string name="eg_chicken_chappatti">eg: Chicken, Chappatti...</string>
+    <string name="enter_your_dinner_items">Enter your DINNER items</string>
+    <string name="eg_pulses_rice">eg: Pulses, Rice...</string>
+    <string name="enter_your_lunch_items">Enter your lunch items</string>
+    <string name="eg_boiled_eggs_potato">eg: Boiled eggs, Potato...</string>
+    <string name="enter_your_breakfast">Enter your breakfast</string>
+    <string name="eg_monday_tuesday">eg: Monday, Tuesday...</string>
+    <string name="enter_day">Enter Day</string>
+    <string name="please_add_your_daily_meals">Please add your daily meals</string>
 </resources>

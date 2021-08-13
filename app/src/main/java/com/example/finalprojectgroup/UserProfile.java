@@ -82,6 +82,7 @@ public class UserProfile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
 
@@ -104,6 +105,7 @@ public class UserProfile extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         SharedPreferences preferences1 = PreferenceManager.getDefaultSharedPreferences(this);
         Boolean status = preferences1.getBoolean("SignedIn", false);
         if (status) {

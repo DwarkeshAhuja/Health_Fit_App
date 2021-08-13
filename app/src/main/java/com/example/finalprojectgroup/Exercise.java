@@ -82,6 +82,7 @@ public class Exercise extends AppCompatActivity {
                 }
             }
         });
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     private void startTimer() {
@@ -302,4 +303,9 @@ public class Exercise extends AppCompatActivity {
         editor.apply();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }
