@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:backgroundTint="@color/cardview_light_background"
-            android:text="Start"
+            android:text="@string/start"
             android:layout_marginStart="70dp"
             android:textColor="#000000"
             app:layout_constraintEnd_toStartOf="@id/reset"
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:backgroundTint="@color/cardview_light_background"
-            android:text="Reset"
+            android:text="@string/reset"
             android:textColor="#000000"
             android:layout_marginStart="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +46,8 @@
             android:scaleType="fitXY"
             android:src="@drawable/squat_stand"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:contentDescription="@string/todo" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -59,7 +60,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/plank" />
+            app:srcCompat="@drawable/plank"
+            android:contentDescription="@string/todo" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -69,7 +71,8 @@
             android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/beginner" />
+            app:srcCompat="@drawable/beginner"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/time"

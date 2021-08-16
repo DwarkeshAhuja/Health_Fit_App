@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -56,7 +55,8 @@
             android:textColor="#000000"
             android:textColorHighlight="#000000"
             android:textColorHint="#000000"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:importantForAutofill="no" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -81,7 +81,8 @@
             android:textColor="#000000"
             android:textColorHighlight="#000000"
             android:textColorHint="#000000"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:importantForAutofill="no" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -104,7 +105,8 @@
             android:inputType="textPersonName"
             android:textColor="#000000"
             android:textColorHint="#000000"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:importantForAutofill="no" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -127,7 +129,8 @@
             android:inputType="textPersonName"
             android:textColor="#000000"
             android:textColorHint="#000000"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:importantForAutofill="no" />
 
 
 
@@ -141,7 +144,8 @@
             android:inputType="textPersonName"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:importantForAutofill="no" />
 
         <LinearLayout
             android:id="@+id/container"

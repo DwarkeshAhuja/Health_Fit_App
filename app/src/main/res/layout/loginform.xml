@@ -14,16 +14,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/mypassreg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:importantForAutofill="no" />
 
         <Button
             android:id="@+id/Login"
@@ -31,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:backgroundTint="#3700B3"
-            android:text="Log In"
+            android:text="@string/log_in"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite" />
 
@@ -41,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Create a new Acount!"
+            android:text="@string/create_a_new_acount"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             android:textStyle="bold" />

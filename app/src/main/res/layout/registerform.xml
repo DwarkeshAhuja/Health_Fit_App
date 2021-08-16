@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#0C0A0E"
     android:layout_height="match_parent">
-    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -21,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Please Enter your name"
+                android:text="@string/please_enter_your_name"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -31,8 +29,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="First Name"
-                android:inputType="text" />
+                android:hint="@string/first_name"
+                android:inputType="text"
+                android:importantForAutofill="no" />
 
             <TextView
                 android:id="@+id/EmailId"
@@ -41,7 +40,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:text="Please Enter Email ID"
+                android:text="@string/please_enter_email_id"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -51,8 +50,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Email"
-                android:inputType="textEmailAddress" />
+                android:hint="@string/email_reg"
+                android:inputType="textEmailAddress"
+                android:importantForAutofill="no" />
 
             <TextView
                 android:id="@+id/password_details"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Please Enter  Password"
+                android:text="@string/please_enter_password"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -76,13 +76,15 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:layout_marginStart="20dp"
-                    android:hint="Password"
-                    android:inputType="textPassword" />
+                    android:hint="@string/password_reg"
+                    android:inputType="textPassword"
+                    android:importantForAutofill="no" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/showPassword1"
-                    android:src="@drawable/img_show_password"/>
+                    android:src="@drawable/img_show_password"
+                    android:contentDescription="@string/todo" />
             </LinearLayout>
 
 
@@ -94,7 +96,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="15dp"
-                android:text="Please Re-Enter  Password"
+                android:text="@string/please_re_enter_password_reg"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -109,14 +111,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Re-Enter Password"
+                    android:hint="@string/re_enter_password_reg"
                     android:layout_marginStart="20dp"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:importantForAutofill="no" />
                 <ImageView
                     android:id="@+id/showPassword2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/img_show_password"/>
+                    android:src="@drawable/img_show_password"
+                    android:contentDescription="@string/todo" />
 
             </LinearLayout>
 
@@ -128,7 +132,7 @@
                 android:layout_gravity="center"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
-                android:text="Paid For Premium" />
+                android:text="@string/paid_for_premium" />
 
             <Button
                 android:id="@+id/Register"
@@ -136,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#3700B3"
-                android:text="Register"
+                android:text="@string/register"
                 android:textAllCaps="false"
                 android:textColor="@color/colorWhite" />
 
