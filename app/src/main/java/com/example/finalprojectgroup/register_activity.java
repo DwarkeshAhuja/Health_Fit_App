@@ -105,7 +105,7 @@ public class register_activity extends AppCompatActivity {
                         }else{
                             premium = "false";
                         }
-                        Toast.makeText(register_activity.this, "Creating your profile", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(register_activity.this, "Creating your profile", Toast.LENGTH_SHORT).show();
                         DB.insertuserdata(myEmail,myName,pass1,premium);
                         Intent intent = new Intent(register_activity.this, MainActivity.class);
                         startActivity(intent);

@@ -7,6 +7,16 @@
     android:background="#0C0A0E"
     tools:context=".UserProfile">
 
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile" />
+
     <TextView
         android:id="@+id/Name"
         android:layout_width="wrap_content"
@@ -19,6 +29,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/begin"
@@ -55,15 +75,5 @@
         android:src="@drawable/advance"
         android:tag="2"
         app:layout_constraintTop_toBottomOf="@id/inter" />
-
-    <ImageView
-        android:id="@+id/menu"
-        android:layout_width="38dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

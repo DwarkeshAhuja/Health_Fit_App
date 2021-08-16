@@ -48,7 +48,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Boolean deleteuserdata(String email){
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select * from UserLogindetails where name = ?", new String[]{email});
+        Cursor cursor = DB.rawQuery("Select * from UserLogindetails where email = ?", new String[]{email});
         if(cursor.getCount()>0){
             long result = DB.delete("UserLogindetails", "email=?", new String[]{email});
             return result != -1;

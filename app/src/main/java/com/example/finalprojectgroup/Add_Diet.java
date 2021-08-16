@@ -41,7 +41,7 @@ public class Add_Diet extends AppCompatActivity {
         String premiumPaid = intent.getStringExtra("premiumPaid");
         String userEmail = intent.getStringExtra("userEmail");
 
-        Toast.makeText(this, "The Email ID is " + userEmail, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "The Email ID is " + userEmail, Toast.LENGTH_LONG).show();
 
 
 
@@ -55,16 +55,16 @@ public class Add_Diet extends AppCompatActivity {
                 String snack = snacks.getText().toString();
                 String dinners = dinner.getText().toString();
 
-                Toast.makeText(Add_Diet.this, days + " " + breakfasts + " " + lunchs + " " + snack + " " + dinners, Toast.LENGTH_LONG).show();
+                //Toast.makeText(Add_Diet.this, days + " " + breakfasts + " " + lunchs + " " + snack + " " + dinners, Toast.LENGTH_LONG).show();
                 Log.d("login", "onClick: " + days + " " + breakfasts + " " + lunchs + " " + snack + " " + dinners);
                 Boolean checkinsertData = DB.insertuserMealdata(userEmail,days,breakfasts,lunchs,snack,dinners);
 
                 if(checkinsertData){
-                    Toast.makeText(Add_Diet.this, "New Entry Inserted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Add_Diet.this, "New meal plan inserted", Toast.LENGTH_SHORT).show();
                     Log.d("login", "onClick: Data inserted ");
                 }
                 else {
-                    Toast.makeText(Add_Diet.this, "New Entry NOT Inserted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Add_Diet.this, "No New meal plan inserted", Toast.LENGTH_SHORT).show();
                     Log.d("login", "onClick: Data cannot be inserted ");
                 }
 
@@ -78,10 +78,10 @@ public class Add_Diet extends AppCompatActivity {
                 Boolean checkdeletedata = DB.deleteuserMealdata(userEmail);
 
                 if(checkdeletedata){
-                    Toast.makeText(Add_Diet.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Add_Diet.this, "Meal Plan Deleted", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(Add_Diet.this, "Entry not Deleted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Add_Diet.this, "No Meal Plan Deleted", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -100,10 +100,10 @@ public class Add_Diet extends AppCompatActivity {
                 Boolean checkupdate = DB.updateuserMealdata(userEmail,days,breakfasts,lunchs,snack,dinners);
 
                 if(checkupdate){
-                    Toast.makeText(Add_Diet.this, "Entry Updated", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Add_Diet.this, "Meal Plan Updated", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(Add_Diet.this, "Entry not Updated", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Add_Diet.this, "No Meal Plan Updated", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -136,7 +136,7 @@ public class Add_Diet extends AppCompatActivity {
 //                    builder.setMessage(buffer.toString());
 //                    builder.show();
                 if(res.getCount() == 0){
-                    Toast.makeText(Add_Diet.this, "Nothing existed!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Add_Diet.this, "No Meal Plan existed!", Toast.LENGTH_SHORT).show();
 
                 }
                 else {
